@@ -2,54 +2,25 @@ import math
 
 
 def square_area(side):
-    """Returns the area of a square"""
-    # You have to code here
-    # REMEMBER: Tests first!!!
-    pass
-
+    return side * side
 
 def rectangle_area(base, height):
-    """Returns the area of a rectangle"""
-    # You have to code here
-    # REMEMBER: Tests first!!!
-    pass
-
+    return base * height
 
 def triangle_area(base, height):
-    """Returns the area of a triangle"""
-    # You have to code here
-    # REMEMBER: Tests first!!!
-    pass
-
+	return (base * height)/2
 
 def rhombus_area(diagonal_1, diagonal_2):
-    """Returns the area of a rhombus"""
-    # You have to code here
-    # REMEMBER: Tests first!!!
-    pass
-
+	return (diagonal_1 * diagonal_2) / 2
 
 def trapezoid_area(base_minor, base_major, height):
-    """Returns the area of a trapezoid"""
-    # You have to code here
-    # REMEMBER: Tests first!!!
-    pass
-
+	return (base_minor + base_major) * height/2
 
 def regular_polygon_area(perimeter, apothem):
-    """Returns the area of a regular polygon"""
-    # You have to code here
-    # REMEMBER: Tests first!!!
-    pass
-
+	return (perimeter*apothem)/2
 
 def circumference_area(radius):
-    """Returns the area of a circumference"""
-    # You have to code here
-    # REMEMBER: Tests first!!!
-    # Use math.pi for π value
-    pass
-
+	return math.pi * radius**2
 
 if __name__ == '__main__':
     import unittest
@@ -61,25 +32,25 @@ if __name__ == '__main__':
             pass
 
         def test_square_area(self):
-            # Make this test first...
+            self.assertEqual(25, square_area(5))
 
         def test_rectangle_area(self):
-            # Make this test first...
+            self.assertEqual(10 ,rectangle_area(5,2))
 
         def test_triangle_area(self):
-            # Make this test first...
+            self.assertEqual(5, triangle_area(5,2))
 
         def test_rhombus_area(self):
-            # Make this test first...
+            self.assertEqual(25, rhombus_area(10, 5))
 
         def test_trapezoid_area(self):
-            # Make this test first...
+            self.assertEqual(30, trapezoid_area(10, 5, 4))
 
         def test_regular_polygon_area(self):
-            # Make this test first...
+            self.assertEqual(25, regular_polygon_area(10, 5))
 
         def test_circumference_area(self):
-            # Make this test first...
+            self.assertEqual(math.pi*25, circumference_area(5))
 
         def tearDown(self):
             # Delete the needed values for the tests
